@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">조코의 장-나물-밥 로고</title>
+  <desc id="logoDesc">따뜻한 색상의 원 안에 젓가락과 밥공기를 형상화한 로고</desc>
+  <defs>
+    <linearGradient id="bowlGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="58" fill="#fef3c7" stroke="#ea580c" stroke-width="4" />
+  <path d="M30 70h60c0 15-13.4 27-30 27S30 85 30 70z" fill="url(#bowlGradient)" />
+  <path d="M46 50c0-7.5 6-13.5 13.5-13.5S73 42.5 73 50" fill="none" stroke="#ea580c" stroke-width="5" stroke-linecap="round" />
+  <path d="M82 32l7 34" stroke="#b45309" stroke-width="5" stroke-linecap="round" />
+  <path d="M92 30l7 34" stroke="#78350f" stroke-width="5" stroke-linecap="round" />
+</svg>

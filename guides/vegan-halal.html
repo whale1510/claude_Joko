@@ -5,31 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>비건 &amp; 할랄 대체재 가이드 | 조코의 장-나물-밥</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/includes.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="/">조코의 장-나물-밥</a>
-        <nav class="nav-links">
-          <a href="/index.html">홈</a>
-          <a href="/recipes/index.html">레시피</a>
-          <a href="/guides/vegan-halal.html">가이드</a>
-          <a href="/about.html">소개</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="section">
-        <h1 class="section-title">비건 &amp; 할랄 대체재 가이드</h1>
-        <p>
-          장·나물·밥 레시피를 다양한 식단에서 즐길 수 있도록 대표 대체재와
-          제품 추천을 정리했습니다. 재료 구입 시 라벨을 확인하고, 알레르기 및
-          개인 선호에 따라 조정하세요.
-        </p>
+    <div data-include="/partials/header.html"></div>
+    <main id="main-content">
+      <section class="section" aria-labelledby="guide-heading">
+        <div>
+          <h1 class="section-title" id="guide-heading">비건 &amp; 할랄 대체재 가이드</h1>
+          <p class="section-lead">장·나물·밥 레시피를 다양한 식단에서 즐길 수 있도록 대표 대체재와 제품 추천을 정리했습니다.</p>
+        </div>
+        <p>재료 구입 시 라벨을 확인하고, 알레르기 및 개인 선호에 따라 조정하세요. 동일한 레시피라도 대체재를 더하면 맛의 균형이 달라질 수 있습니다.</p>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">발효 장 &amp; 소스</h2>
+      <section class="section" aria-labelledby="guide-fermented">
+        <div>
+          <h2 class="section-title" id="guide-fermented">발효 장 &amp; 소스</h2>
+          <p class="section-lead">감칠맛의 핵심이 되는 장류를 안전하게 대체하는 방법입니다.</p>
+        </div>
         <div class="recipe-list">
           <article class="card">
             <h3>된장 &amp; 고추장</h3>
@@ -50,8 +43,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">단백질 &amp; 토핑</h2>
+      <section class="section" aria-labelledby="guide-protein">
+        <div>
+          <h2 class="section-title" id="guide-protein">단백질 &amp; 토핑</h2>
+          <p class="section-lead">식단에 맞는 단백질 토핑을 추가하면 영양 균형이 맞춰집니다.</p>
+        </div>
         <div class="recipe-list">
           <article class="card">
             <h3>비건 옵션</h3>
@@ -72,8 +68,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">오일 &amp; 향신료</h2>
+      <section class="section" aria-labelledby="guide-oil">
+        <div>
+          <h2 class="section-title" id="guide-oil">오일 &amp; 향신료</h2>
+          <p class="section-lead">향과 풍미를 조절하는 재료도 식단에 맞게 바꿔보세요.</p>
+        </div>
         <div class="recipe-list">
           <article class="card">
             <h3>오일 대체</h3>
@@ -94,25 +93,12 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">더 알아보기</h2>
-        <div class="recipe-list">
-          <article class="card">
-            <h3>한국 식재료 길라잡이</h3>
-            <p>
-              장, 나물, 밥에 자주 쓰이는 한국 식재료의 특징과 보관 방법을
-              살펴보세요.
-            </p>
-            <a href="/guides/korean-ingredients.html">식재료 설명 보기 →</a>
-          </article>
-        </div>
-      </section>
+      <aside class="section aside-panel" aria-labelledby="guide-extra">
+        <h2 id="guide-extra">더 알아보기</h2>
+        <p>장·나물·밥 레시피마다 다른 대체재 조합을 적용해보세요. 이미 준비된 대체재가 없다면 한국 식재료 길라잡이에서 기본 재료부터 살펴보는 것도 좋습니다.</p>
+        <a class="button tertiary" href="/guides/korean-ingredients.html">한국 식재료 길라잡이</a>
+      </aside>
     </main>
-    <footer>
-      <div class="footer-inner">
-        <strong>조코의 장-나물-밥 프로젝트</strong>
-        <small>© 2024 Joko Culinary Lab. All rights reserved.</small>
-      </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
   </body>
 </html>

@@ -5,30 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>장 레시피 모음 | 조코의 장-나물-밥</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/includes.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="/">조코의 장-나물-밥</a>
-        <nav class="nav-links">
-          <a href="/index.html">홈</a>
-          <a href="/recipes/index.html">레시피</a>
-          <a href="/guides/vegan-halal.html">가이드</a>
-          <a href="/about.html">소개</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="section">
-        <h1 class="section-title">장 (Jang) 레시피</h1>
-        <p>
-          발효 장의 깊은 풍미를 살린 요리를 소개합니다. 기본 장 만들기부터
-          찌개, 양념 활용법까지 한눈에 살펴보세요.
-        </p>
+    <div data-include="/partials/header.html"></div>
+    <main id="main-content">
+      <section class="section" aria-labelledby="jang-overview">
+        <div>
+          <h1 class="section-title" id="jang-overview">장 (Jang) 레시피</h1>
+          <p class="section-lead">발효 장의 깊은 풍미를 살린 요리를 소개합니다. 기본 장 만들기부터 찌개, 양념 활용법까지 한눈에 살펴보세요.</p>
+        </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">찌개 &amp; 국물 요리</h2>
+      <section class="section" aria-labelledby="jang-stews">
+        <div>
+          <h2 class="section-title" id="jang-stews">찌개 &amp; 국물 요리</h2>
+          <p class="section-lead">구수한 국물과 감칠맛을 살린 요리를 준비했습니다.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/jang/doenjang-jjigae.html">된장찌개</a></h3>
@@ -41,8 +34,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">양념 &amp; 소스</h2>
+      <section class="section" aria-labelledby="jang-sauces">
+        <div>
+          <h2 class="section-title" id="jang-sauces">양념 &amp; 소스</h2>
+          <p class="section-lead">상차림을 완성하는 장 요리와 응용법을 만나보세요.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/jang/ssamjang.html">쌈장</a></h3>
@@ -54,12 +50,12 @@
           </article>
         </div>
       </section>
+
+      <aside class="section aside-panel" aria-labelledby="jang-alt-heading">
+        <h2 id="jang-alt-heading">장류 대체재 팁</h2>
+        <p>할랄 간장이나 비건 고추장은 저염 제품을 선택하면 맛 균형을 맞추기 좋습니다. 부족한 감칠맛은 다시마 가루나 표고버섯 가루로 채워보세요.</p>
+      </aside>
     </main>
-    <footer>
-      <div class="footer-inner">
-        <strong>조코의 장-나물-밥 프로젝트</strong>
-        <small>© 2024 Joko Culinary Lab. All rights reserved.</small>
-      </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
   </body>
 </html>

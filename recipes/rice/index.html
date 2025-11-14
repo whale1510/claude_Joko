@@ -5,61 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>밥 레시피 모음 | 조코의 장-나물-밥</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/includes.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="/">조코의 장-나물-밥</a>
-        <nav class="nav-links">
-          <a href="/index.html">홈</a>
-          <a href="/recipes/index.html">레시피</a>
-          <a href="/guides/vegan-halal.html">가이드</a>
-          <a href="/about.html">소개</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="section">
-        <h1 class="section-title">밥 (Rice) 레시피</h1>
-        <p>
-          다양하게 활용 가능한 밥 요리를 모았습니다. 비빔밥, 볶음밥 등 한
-          그릇 메뉴로 든든한 식사를 준비하세요.
-        </p>
+    <div data-include="/partials/header.html"></div>
+    <main id="main-content">
+      <section class="section" aria-labelledby="rice-overview">
+        <div>
+          <h1 class="section-title" id="rice-overview">밥 (Rice) 레시피</h1>
+          <p class="section-lead">든든한 한 끼를 책임지는 밥 한 그릇 요리를 만나보세요.</p>
+        </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">비빔밥 &amp; 덮밥</h2>
+      <section class="section" aria-labelledby="rice-bowls">
+        <div>
+          <h2 class="section-title" id="rice-bowls">한 그릇 요리</h2>
+          <p class="section-lead">다양한 토핑과 양념으로 완성하는 대표 밥 요리를 소개합니다.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/rice/bibimbap.html">비빔밥</a></h3>
-            <p>다양한 나물과 고추장 양념이 어우러진 상징적인 밥 요리.</p>
-            <ul>
-              <li>채소 준비와 밥 양 조절 팁</li>
-              <li>비건/할랄 토핑 추천</li>
-            </ul>
+            <p>다양한 나물과 고추장 양념이 조화로운 대표 밥 요리.</p>
+          </article>
+          <article class="card recipe-card">
+            <h3><a href="/recipes/rice/kimchi-fried-rice.html">김치볶음밥</a></h3>
+            <p>김치와 밥, 간단한 재료로 완성하는 빠른 한 끼.</p>
           </article>
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">볶음밥</h2>
-        <div class="recipe-list">
-          <article class="card recipe-card">
-            <h3><a href="/recipes/rice/kimchi-fried-rice.html">김치볶음밥</a></h3>
-            <p>매콤한 김치와 밥이 조화로운 국민 볶음밥.</p>
-            <ul>
-              <li>김치 숙성도에 따른 맛 조절</li>
-              <li>비건·할랄 소시지, 토핑 대안</li>
-            </ul>
-          </article>
-        </div>
-      </section>
+      <aside class="section aside-panel" aria-labelledby="rice-alt-heading">
+        <h2 id="rice-alt-heading">밥 요리 대체재 팁</h2>
+        <p>잡곡이나 퀴노아를 섞어 영양을 더하고, 고추장 양념에는 비건 고추장이나 코코넛 아미노스를 활용해 할랄 식단으로 즐겨보세요.</p>
+      </aside>
     </main>
-    <footer>
-      <div class="footer-inner">
-        <strong>조코의 장-나물-밥 프로젝트</strong>
-        <small>© 2024 Joko Culinary Lab. All rights reserved.</small>
-      </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
   </body>
 </html>
