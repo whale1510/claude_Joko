@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>전체 레시피 | 조코의 장-나물-밥</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/includes.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="/">조코의 장-나물-밥</a>
-        <nav class="nav-links">
-          <a href="/index.html">홈</a>
-          <a href="/recipes/index.html">레시피</a>
-          <a href="/guides/vegan-halal.html">가이드</a>
-          <a href="/about.html">소개</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <header class="section">
-        <h1 class="section-title">전체 레시피 살펴보기</h1>
-        <p>
-          조코의 큐레이션으로 고른 대표 레시피를 카테고리별로 정리했습니다.
-          장, 나물, 밥 카테고리를 오가며 새로운 메뉴를 발견하세요.
-        </p>
-      </header>
+    <div data-include="/partials/header.html"></div>
+    <main id="main-content">
+      <section class="section" aria-labelledby="recipes-heading">
+        <div>
+          <h1 class="section-title" id="recipes-heading">전체 레시피 살펴보기</h1>
+          <p class="section-lead">
+            조코의 큐레이션으로 고른 대표 레시피를 카테고리별로 정리했습니다. 장, 나물, 밥 카테고리를 오가며 새로운 메뉴를 발견하세요.
+          </p>
+        </div>
+      </section>
 
-      <section class="section">
-        <h2 class="section-title">카테고리 바로가기</h2>
+      <section class="section" aria-labelledby="category-shortcut">
+        <div>
+          <h2 class="section-title" id="category-shortcut">카테고리 바로가기</h2>
+          <p class="section-lead">원하는 재료와 조리법을 빠르게 확인할 수 있도록 모았습니다.</p>
+        </div>
         <div class="grid cards-3">
           <article class="card">
             <h3>장 레시피</h3>
@@ -48,8 +43,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">장 (Jang)</h2>
+      <section class="section" aria-labelledby="jang-recipes">
+        <div>
+          <h2 class="section-title" id="jang-recipes">장 (Jang)</h2>
+          <p class="section-lead">발효 장의 깊은 맛을 살린 찌개와 양념 레시피를 확인하세요.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/jang/doenjang-jjigae.html">된장찌개</a></h3>
@@ -62,8 +60,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">나물 (Namul)</h2>
+      <section class="section" aria-labelledby="namul-recipes">
+        <div>
+          <h2 class="section-title" id="namul-recipes">나물 (Namul)</h2>
+          <p class="section-lead">계절 나물의 향을 살린 반찬 레시피로 식탁을 채워보세요.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/namul/spinach-namul.html">시금치나물</a></h3>
@@ -76,8 +77,11 @@
         </div>
       </section>
 
-      <section class="section">
-        <h2 class="section-title">밥 (Rice)</h2>
+      <section class="section" aria-labelledby="rice-recipes">
+        <div>
+          <h2 class="section-title" id="rice-recipes">밥 (Rice)</h2>
+          <p class="section-lead">다양한 토핑과 양념으로 완성하는 든든한 밥 요리를 소개합니다.</p>
+        </div>
         <div class="recipe-list">
           <article class="card recipe-card">
             <h3><a href="/recipes/rice/bibimbap.html">비빔밥</a></h3>
@@ -89,12 +93,16 @@
           </article>
         </div>
       </section>
+
+      <aside class="section aside-panel" aria-labelledby="recipe-alt-heading">
+        <h2 id="recipe-alt-heading">레시피 대체재 안내</h2>
+        <p>
+          각 레시피 페이지에서는 비건 및 할랄 식단을 위한 대체재 정보를 별도의 박스로 제공하고 있습니다. 장류는 인증 제품을 선택하고,
+          육수는 채수나 표고버섯 육수로 바꿔보세요.
+        </p>
+        <a class="button tertiary" href="/guides/vegan-halal.html">대체재 가이드 바로가기</a>
+      </aside>
     </main>
-    <footer>
-      <div class="footer-inner">
-        <strong>조코의 장-나물-밥 프로젝트</strong>
-        <small>© 2024 Joko Culinary Lab. All rights reserved.</small>
-      </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
   </body>
 </html>

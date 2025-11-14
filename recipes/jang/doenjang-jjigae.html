@@ -5,38 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>된장찌개 | 조코의 장-나물-밥</title>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <script src="/assets/js/includes.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a class="brand" href="/">조코의 장-나물-밥</a>
-        <nav class="nav-links">
-          <a href="/index.html">홈</a>
-          <a href="/recipes/index.html">레시피</a>
-          <a href="/guides/vegan-halal.html">가이드</a>
-          <a href="/about.html">소개</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <article class="section">
+    <div data-include="/partials/header.html"></div>
+    <main id="main-content">
+      <article class="section" aria-labelledby="doenjang-heading">
         <header>
           <span class="category-tag">장 (Jang)</span>
-          <h1 class="section-title">된장찌개</h1>
+          <h1 class="section-title" id="doenjang-heading">된장찌개</h1>
           <div class="recipe-metadata">
             <span>⏱ 준비 10분 + 조리 20분</span>
             <span>🥄 3~4인분</span>
           </div>
           <p>
-            구수한 된장과 제철 채소, 두부가 어우러진 집밥의 정석. 기본 육수와
-            재료 손질법만 숙지하면 언제든 깊은 맛을 낼 수 있습니다.
+            구수한 된장과 제철 채소, 두부가 어우러진 집밥의 정석. 기본 육수와 재료 손질법만 숙지하면 언제든 깊은 맛을 낼 수 있습니다.
           </p>
         </header>
       </article>
 
-      <section class="layout-two-column section">
+      <section class="layout-two-column section" aria-labelledby="ingredients-heading">
         <section class="recipe-section">
-          <h2>재료</h2>
+          <h2 id="ingredients-heading">재료</h2>
           <ul>
             <li>된장 2큰술</li>
             <li>멸치·다시마 육수 3컵</li>
@@ -46,19 +36,19 @@
             <li>마늘 다진 것 1큰술</li>
           </ul>
         </section>
-        <section class="recipe-section">
-          <h2>비건 &amp; 할랄 대체재</h2>
+        <aside class="aside-panel" aria-labelledby="substitution-heading">
+          <h2 id="substitution-heading">비건 &amp; 할랄 대체재</h2>
           <ul>
             <li>육수: 건다시마와 표고버섯을 우린 채수로 대체</li>
             <li>된장: 비건 인증 또는 할랄 인증 된장을 사용</li>
             <li>매운맛 조절: 청양고추 대신 파프리카 또는 할라피뇨 활용</li>
             <li>단백질 추가: 비건 연두부, 병아리콩 추가</li>
           </ul>
-        </section>
+        </aside>
       </section>
 
-      <section class="recipe-section section recipe-steps">
-        <h2>조리 순서</h2>
+      <section class="recipe-section section recipe-steps" aria-labelledby="steps-heading">
+        <h2 id="steps-heading">조리 순서</h2>
         <ol>
           <li>냄비에 육수를 붓고 끓는 동안 감자, 애호박, 양파를 한입 크기로 썬다.</li>
           <li>육수가 끓기 시작하면 된장을 체에 풀어 넣어 알갱이를 고르게 한다.</li>
@@ -68,11 +58,6 @@
         </ol>
       </section>
     </main>
-    <footer>
-      <div class="footer-inner">
-        <strong>조코의 장-나물-밥 프로젝트</strong>
-        <small>© 2024 Joko Culinary Lab. All rights reserved.</small>
-      </div>
-    </footer>
+    <div data-include="/partials/footer.html"></div>
   </body>
 </html>
