@@ -3,155 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>조코의 한식 레시피 가이드</title>
+    <title>조코의 장·나물·밥 | 한식 레시피 가이드</title>
+    <meta name="description" content="한국의 전통 발효 장, 제철 나물, 밥 요리를 소개하는 레시피 사이트. 비건과 할랄 식단을 위한 대체재 가이드 포함." />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/includes.js" defer></script>
   </head>
   <body data-root-path=".">
     <div data-include="partials/header.html" data-root-path="."></div>
+
     <main id="main-content">
+      <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">한식의 전통 요리, 밥·메인디쉬·사이드디쉬을 한 곳에서</h1>
+        <h1 id="hero-heading">한식의 기본, 장·나물·밥</h1>
         <p>
-          한국의 밥, 메인 디쉬, 그리고 다양한 사이드 디쉬를 담은 큐레이션 레시피를
-          만나보세요. 비건과 할랄 식단을 위한 대체재 가이드까지 준비되어 있어 누구나 부담 없이 한식을 즐길 수 있습니다.
+          발효의 깊이, 제철의 향, 든든한 한 끼. 비건과 할랄 식단을 위한 대체재까지
+          준비된 한식 레시피로 누구나 부담 없이 즐기세요.
         </p>
         <div class="button-group">
-          <a class="button primary" href="recipes/index.html">전체 레시피 보기</a>
-          <a class="button secondary" href="guides/vegan-halal.html">비건·할랄 가이드</a>
+          <a class="button primary" href="#categories-heading">카테고리 탐색</a>
+          <a class="button tertiary" href="#filter-heading">레시피 찾기</a>
+          <a class="button secondary" href="#featured-heading">추천 레시피 보기</a>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="highlight-heading">
-        <div>
-          <h2 class="section-title" id="highlight-heading">밥·메인디쉬·사이드디쉬, 이렇게 즐겨보세요</h2>
-          <p class="section-lead">기본 재료를 활용한 대표 조합과 조리 팁을 소개합니다.</p>
-        </div>
+      <!-- Quick Navigation Links -->
+      <section class="section" aria-labelledby="quick-nav-heading">
         <div class="highlight-grid">
-          <article class="highlight-card">
-            <h3>다양한 밥 요리로 깊은 감칠맛 더하기</h3>
-            <p>백미, 흑미 등 다양한 곡물을 바탕으로 된장, 고추장, 간장 등 발효 양념장와 함께 활용하면 집에서도 깊고 풍부한 맛을 낼 수 있습니다.</p>
+          <a href="recipes/index.html" class="highlight-card">
+            <div class="highlight-card-icon">🍚</div>
+            <h3>전체 레시피</h3>
+            <p>장, 나물, 밥 카테고리별 레시피를 모두 탐색하세요</p>
+          </a>
+          <a href="guides/vegan-halal.html" class="highlight-card">
+            <div class="highlight-card-icon">🌱</div>
+            <h3>비건·할랄 가이드</h3>
+            <p>식단에 맞는 대체재와 조리법을 확인하세요</p>
+          </a>
+          <a href="guides/korean-ingredients.html" class="highlight-card">
+            <div class="highlight-card-icon">🥬</div>
+            <h3>한국 식재료 안내</h3>
+            <p>장, 나물, 곡물의 특징과 보관법을 알아보세요</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Featured Recipes - Image First -->
+      <section class="section" aria-labelledby="featured-heading">
+        <div>
+          <h2 class="section-title" id="featured-heading">오늘의 추천 레시피</h2>
+          <p class="section-lead">계절 재료와 입맛을 고려해 엄선한 대표 메뉴를 만나보세요.</p>
+        </div>
+        <div class="recipe-card-grid">
+          <article class="card recipe-card">
+            <img src="assets/img/recipes/doenjang-jjigae.jpg" alt="된장찌개" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">장 (Jang)</span>
+              <h3><a href="recipes/jang/doenjang-jjigae.html">된장찌개</a></h3>
+              <p>구수한 된장과 두부, 제철 채소가 어우러진 집밥의 정석.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30분</span>
+                <span>🥄 3~4인분</span>
+              </div>
+            </div>
           </article>
-          <article class="highlight-card">
-            <h3>간편하고 쉬운 고기, 찌개 요리 만들어보기</h3>
-            <p>데치고 헹궈 물기를 꼭 짜준 뒤, 결대로 가볍게 무쳐야 나물을 장과 함께 끓여 넣으면 식감이 살아납니다.</p>
+          <article class="card recipe-card">
+            <img src="assets/img/recipes/spinach-namul.jpg" alt="시금치나물" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">나물 (Namul)</span>
+              <h3><a href="recipes/namul/spinach-namul.html">시금치나물</a></h3>
+              <p>봄철 대표 나물로 비타민과 철분이 풍부한 반찬.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 10분</span>
+                <span>🥄 2인분</span>
+              </div>
+            </div>
           </article>
-          <article class="highlight-card">
-            <h3>사이드 디쉬는 토핑으로 완성하기</h3>
-            <p>양념장과 나물, 계절 토핑을 곁들여 무침으로도 균형 잡힌 식사를 만들 수 있습니다.</p>
+          <article class="card recipe-card">
+            <img src="assets/img/recipes/bibimbap.jpg" alt="비빔밥" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">밥 (Rice)</span>
+              <h3><a href="recipes/rice/bibimbap.html">비빔밥</a></h3>
+              <p>다양한 나물과 고추장이 조화를 이루는 대표 한식.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 25분</span>
+                <span>🥄 2인분</span>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section class="section filter-panel" aria-labelledby="filter-heading">
+      <!-- Category Cards -->
+      <section class="section" aria-labelledby="categories-heading">
         <div>
-          <h2 class="section-title" id="filter-heading">입맛에 맞는 레시피 찾기</h2>
-          <p class="section-lead">식단 유형과 조리 시간, 재료를 선택하면 추천 레시피를 빠르게 탐색할 수 있습니다.</p>
-        </div>
-        <form class="filter-form" aria-label="레시피 필터">
-          <fieldset class="filter-group">
-            <legend>식단 유형</legend>
-            <div class="filter-options">
-              <label><input type="checkbox" name="diet" value="vegan" /> 비건</label>
-              <label><input type="checkbox" name="diet" value="halal" /> 할랄</label>
-              <label><input type="checkbox" name="diet" value="gluten-free" /> 글루텐 프리</label>
-              <label><input type="checkbox" name="diet" value="quick" /> 30분 이내</label>
-            </div>
-          </fieldset>
-          <fieldset class="filter-group">
-            <legend>주요 재료</legend>
-            <div class="filter-badges" role="list">
-              <span class="badge" role="listitem">된장</span>
-              <span class="badge" role="listitem">시금치</span>
-              <span class="badge" role="listitem">버섯</span>
-              <span class="badge" role="listitem">잡곡</span>
-            </div>
-          </fieldset>
-          <button type="submit" class="button primary">필터 적용</button>
-        </form>
-      </section>
-
-      <section class="section content-grid" aria-labelledby="categories-heading">
-        <div>
-          <h2 class="section-title" id="categories-heading">카테고리별 대표 레시피</h2>
-          <p class="section-lead">밥, 메인디쉬, 사이드디쉬 카테고리를 오가며 새로운 메뉴를 발견하세요.</p>
+          <h2 class="section-title" id="categories-heading">카테고리별로 탐색하기</h2>
+          <p class="section-lead">장, 나물, 밥 카테고리를 통해 다양한 한식 레시피를 발견하세요.</p>
         </div>
         <div class="category-grid">
           <article class="card" aria-labelledby="card-jang">
-            <span class="category-tag">메인디쉬</span>
-            <h3 id="card-jang">된장찌개 : 장으로 깊은 맛을</h3>
-            <p>된장, 고추장, 간장 등 발효 장을 활용한 국과 조합 요리를 만나보세요.</p>
-            <a href="recipes/jang/index.html">메인디쉬 레시피 모아보기 →</a>
+            <span class="category-tag">장 (Jang)</span>
+            <h3 id="card-jang">발효 장의 깊은 맛</h3>
+            <p>된장, 고추장, 간장 등 발효 장을 활용한 찌개와 양념 요리. 한식의 감칠맛을 책임지는 핵심 재료입니다.</p>
+            <a href="recipes/jang/index.html">장 레시피 모아보기 →</a>
           </article>
           <article class="card" aria-labelledby="card-namul">
-            <span class="category-tag">사이드디쉬</span>
-            <h3 id="card-namul">땅과 계절의 향을 담은 반찬</h3>
-            <p>향긋한 나물무침과 건강한 곁들이 요리를 선보입니다.</p>
-            <a href="recipes/namul/index.html">사이드디쉬 레시피 모아보기 →</a>
+            <span class="category-tag">나물 (Namul)</span>
+            <h3 id="card-namul">제철 나물의 향</h3>
+            <p>시금치, 콩나물, 고사리 등 계절 채소로 만드는 건강한 반찬. 간단하지만 깊은 맛이 특징입니다.</p>
+            <a href="recipes/namul/index.html">나물 레시피 모아보기 →</a>
           </article>
           <article class="card" aria-labelledby="card-rice">
-            <span class="category-tag">밥</span>
-            <h3 id="card-rice">든든한 한 끼 식사를 책임지는 밥상</h3>
-            <p>잡곡밥부터 볶음밥까지, 다양하게 즐길 수 있는 밥 레시피를 살펴보세요.</p>
+            <span class="category-tag">밥 (Rice)</span>
+            <h3 id="card-rice">든든한 밥 한 그릇</h3>
+            <p>잡곡밥부터 볶음밥, 비빔밥까지. 다양한 토핑과 양념으로 완성하는 한 끼 식사를 소개합니다.</p>
             <a href="recipes/rice/index.html">밥 레시피 모아보기 →</a>
           </article>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="featured-heading">
+      <!-- Recipe Filter -->
+      <section class="section" aria-labelledby="filter-heading">
         <div>
-          <h2 class="section-title" id="featured-heading">추천 레시피</h2>
-          <p class="section-lead">계절 재료와 입맛을 고려한 대표 메뉴를 만나보세요.</p>
+          <h2 class="section-title" id="filter-heading">레시피 찾기</h2>
+          <p class="section-lead">식단 유형과 재료를 선택해 원하는 레시피를 빠르게 찾아보세요.</p>
         </div>
-        <div class="recipe-card-grid">
-          <article class="card recipe-card">
-            <h3><a href="recipes/jang/doenjang-jjigae.html">된장찌개</a></h3>
-            <p>토속적인 구수함이 살아있는 대표 장 요리.</p>
-            <div class="recipe-metadata">
-              <span>⏱ 30분</span>
-              <span>🥄 3인분</span>
-            </div>
-            <ul>
-              <li>된장과 두부, 채소를 듬뿍 담아 진하게 끓여요.</li>
-              <li>비건/할랄 대체재 안내 제공.</li>
-            </ul>
-          </article>
-          <article class="card recipe-card">
-            <h3><a href="recipes/namul/spinach-namul.html">시금치나물</a></h3>
-            <p>간단하지만 깊은 맛을 자랑하는 나물 반찬.</p>
-            <div class="recipe-metadata">
-              <span>⏱ 10분</span>
-              <span>🥄 2인분</span>
-            </div>
-            <ul>
-              <li>데치고 무치는 기본기를 따라가세요.</li>
-              <li>참기름 대신 사용 가능한 오일 소개.</li>
-            </ul>
-          </article>
-          <article class="card recipe-card">
-            <h3><a href="recipes/rice/bibimbap.html">비빔밥</a></h3>
-            <p>다양한 나물과 고소한 고추장 양념이 어우러진 밥 한 그릇.</p>
-            <div class="recipe-metadata">
-              <span>⏱ 25분</span>
-              <span>🥄 2인분</span>
-            </div>
-            <ul>
-              <li>채식·할랄 토핑 제안으로 모두가 즐길 수 있어요.</li>
-              <li>고추장 양념 만드는 법 수록.</li>
-            </ul>
-          </article>
+        <div class="filter-panel">
+          <form class="filter-form" aria-label="레시피 필터">
+            <fieldset class="filter-group">
+              <legend>식단 유형</legend>
+              <div class="filter-options">
+                <label><input type="checkbox" name="diet" value="vegan" /> 비건</label>
+                <label><input type="checkbox" name="diet" value="halal" /> 할랄</label>
+                <label><input type="checkbox" name="diet" value="gluten-free" /> 글루텐 프리</label>
+                <label><input type="checkbox" name="diet" value="quick" /> 30분 이내</label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>카테고리</legend>
+              <div class="filter-options">
+                <label><input type="checkbox" name="category" value="jang" /> 장 (Jang)</label>
+                <label><input type="checkbox" name="category" value="namul" /> 나물 (Namul)</label>
+                <label><input type="checkbox" name="category" value="rice" /> 밥 (Rice)</label>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend>주요 재료</legend>
+              <div class="filter-badges" role="list">
+                <span class="badge" role="listitem">된장</span>
+                <span class="badge" role="listitem">시금치</span>
+                <span class="badge" role="listitem">버섯</span>
+                <span class="badge" role="listitem">잡곡</span>
+                <span class="badge" role="listitem">두부</span>
+                <span class="badge" role="listitem">김치</span>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </section>
 
-      <aside class="section aside-panel" aria-labelledby="substitution-heading">
-        <h2 id="substitution-heading">비건 · 할랄 대체재 가이드 한눈에 보기</h2>
+      <!-- Vegan & Halal Guide CTA -->
+      <aside class="section aside-panel" aria-labelledby="guide-cta-heading">
+        <h2 id="guide-cta-heading">🌱 모든 식단을 위한 한식</h2>
         <p>
-          된장, 고추장 등 장류는 비건 또는 할랄 인증 제품을 선택하고, 육수는 채수나 표고버섯 우린 물로 대체해보세요. 참기름이 부담스럽다면
-          저온압착 들기름이나 향이 부드러운 포도씨유를 활용할 수 있습니다. 더 자세한 대체재 정보는 가이드에서 확인하세요.
+          비건, 할랄, 글루텐 프리 등 다양한 식단 요구에 맞춰 한식을 즐길 수 있습니다.
+          장류는 비건 또는 할랄 인증 제품을 선택하고, 육수는 채수나 표고버섯 우린 물로 대체해보세요.
         </p>
-        <a class="button tertiary" href="guides/vegan-halal.html">대체재 가이드 읽기</a>
+        <ul>
+          <li>비건 인증 된장, 고추장 사용하기</li>
+          <li>채수와 표고버섯 육수로 깊은 맛 내기</li>
+          <li>참기름 대신 들기름, 포도씨유 활용하기</li>
+        </ul>
+        <a class="button tertiary" href="guides/vegan-halal.html">상세 가이드 읽어보기 →</a>
       </aside>
     </main>
+
     <div data-include="partials/footer.html" data-root-path="."></div>
   </body>
 </html>

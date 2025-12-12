@@ -3,92 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>한국 식재료 안내 | 조코의 장-나물-밥</title>
+    <title>한국 식재료 안내 | 조코의 장·나물·밥</title>
+    <meta name="description" content="한식의 핵심 재료인 장, 나물, 곡물의 특징, 보관법, 대체재를 소개합니다." />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="../assets/js/includes.js" defer></script>
   </head>
   <body data-root-path="..">
     <div data-include="../partials/header.html" data-root-path=".."></div>
+
     <main id="main-content">
-      <section class="section" aria-labelledby="ingredients-heading">
-        <div>
-          <h1 class="section-title" id="ingredients-heading">한국 식재료 길라잡이</h1>
-          <p class="section-lead">한식의 맛을 좌우하는 주요 식재료를 소개하고, 대체재와 보관 팁을 정리했습니다.</p>
-        </div>
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="guide-heading">
+        <h1 id="guide-heading">한국 식재료 길라잡이</h1>
         <p>
-          장, 나물, 밥은 기본이지만 세심한 관리와 조합이 필요한 요소입니다. 해외에서도 구하기 쉬운 대체재와 함께 조코 팀이 자주 사용하는 추천 제품을 안내합니다.
+          한식의 맛을 좌우하는 장, 나물, 곡물의 특징과 보관법을 소개합니다.
+          해외에서도 구하기 쉬운 대체재와 실전 팁까지 확인하세요.
         </p>
       </section>
 
-      <section class="section" aria-labelledby="ingredients-jang">
+      <!-- Introduction -->
+      <section class="section">
         <div>
-          <h2 class="section-title" id="ingredients-jang">장 &amp; 발효 식품</h2>
+          <h2 class="section-title">식재료가 만드는 한식의 맛</h2>
+          <p class="section-lead">
+            장, 나물, 밥은 한식의 기본이지만 세심한 선택과 관리가 필요한 요소입니다.
+            각 재료의 특성을 이해하고 올바르게 보관하면 집밥이 더욱 맛있어집니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- Fermented Sauces & Jang -->
+      <section class="section" aria-labelledby="jang-heading">
+        <div>
+          <h2 class="section-title" id="jang-heading">장 & 발효 식품</h2>
           <p class="section-lead">발효 장은 시간과 정성이 만들어내는 감칠맛의 핵심입니다.</p>
         </div>
-        <div class="recipe-card-grid">
-          <article class="card">
-            <h3>된장</h3>
-            <p>메주를 발효해 만드는 장으로 깊은 감칠맛과 구수한 향이 특징입니다. 냉장 보관하며 공기와의 접촉을 줄여 산화를 방지하세요.</p>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>🍯 된장</h3>
+            <ul>
+              <li><strong>특징:</strong> 메주를 발효해 만든 구수한 장</li>
+              <li><strong>용도:</strong> 찌개, 무침, 양념장</li>
+              <li><strong>보관:</strong> 냉장 보관, 공기 접촉 최소화</li>
+              <li><strong>팁:</strong> 무첨가 재래식 메주된장 추천</li>
+              <li><strong>대체:</strong> 병아리콩 미소, 화이트 미소</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>고추장</h3>
-            <p>고춧가루, 찹쌀, 메주, 엿기름으로 만들어 단짠 매콤한 맛을 냅니다. 볶음, 무침, 양념장 등 다양한 요리에 활용됩니다.</p>
+          <article class="guide-card">
+            <h3>🌶️ 고추장</h3>
+            <ul>
+              <li><strong>특징:</strong> 고춧가루와 찹쌀로 만든 단짠 매콤한 장</li>
+              <li><strong>용도:</strong> 볶음, 무침, 비빔밥, 양념</li>
+              <li><strong>보관:</strong> 밀폐 용기에 냉장 보관</li>
+              <li><strong>팁:</strong> 설탕 함량 확인 후 선택</li>
+              <li><strong>대체:</strong> 고춧가루 + 간장 + 설탕 혼합</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>간장</h3>
-            <p>한식 간장은 메주와 소금물을 발효해 만든 조미료입니다. 국간장과 진간장으로 구분되니 용도에 따라 염도를 확인하고 선택하세요.</p>
+          <article class="guide-card">
+            <h3>🫘 간장</h3>
+            <ul>
+              <li><strong>특징:</strong> 메주와 소금물로 발효한 기본 조미료</li>
+              <li><strong>종류:</strong> 국간장 (연한맛), 진간장 (진한맛)</li>
+              <li><strong>보관:</strong> 직사광선 피해 서늘한 곳</li>
+              <li><strong>팁:</strong> 염도 확인 후 용도별 선택</li>
+              <li><strong>대체:</strong> 타마리 간장 (글루텐 프리)</li>
+            </ul>
+          </article>
+          <article class="guide-card">
+            <h3>🧄 마늘 & 생강</h3>
+            <ul>
+              <li><strong>특징:</strong> 한식의 향미 기본 재료</li>
+              <li><strong>용도:</strong> 양념, 육수, 찌개, 볶음</li>
+              <li><strong>보관:</strong> 통마늘은 상온, 다진 마늘은 냉장</li>
+              <li><strong>팁:</strong> 다진 마늘은 참기름에 재워 보관</li>
+              <li><strong>대체:</strong> 마늘 불가 시 생강가루 활용</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="ingredients-namul">
+      <!-- Namul & Vegetables -->
+      <section class="section" aria-labelledby="namul-heading">
         <div>
-          <h2 class="section-title" id="ingredients-namul">나물 &amp; 채소</h2>
+          <h2 class="section-title" id="namul-heading">나물 & 채소</h2>
           <p class="section-lead">제철 나물은 신선한 향과 식감이 중요합니다.</p>
         </div>
-        <div class="recipe-card-grid">
-          <article class="card">
-            <h3>시금치</h3>
-            <p>봄철이 제철인 잎채소로 비타민과 철분이 풍부합니다. 데친 뒤 찬물에 헹궈 색을 유지하고, 물기를 꼭 짜서 사용하세요.</p>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>🥬 시금치</h3>
+            <ul>
+              <li><strong>특징:</strong> 비타민과 철분이 풍부한 봄철 대표 나물</li>
+              <li><strong>조리:</strong> 데친 뒤 찬물에 헹궈 색 유지</li>
+              <li><strong>보관:</strong> 데친 후 냉동 가능 (3개월)</li>
+              <li><strong>팁:</strong> 물기를 꼭 짜서 사용</li>
+              <li><strong>대체:</strong> 근대, 케일 (데치기)</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>콩나물</h3>
-            <p>콩에서 싹을 틔운 식재료로 아삭한 식감이 특징입니다. 삶을 때 뚜껑을 열지 않으면 비린내가 나지 않으며, 데친 뒤 즉시 조리하는 것이 좋습니다.</p>
+          <article class="guide-card">
+            <h3>🥕 콩나물</h3>
+            <ul>
+              <li><strong>특징:</strong> 아삭한 식감이 특징인 콩 싹</li>
+              <li><strong>조리:</strong> 뚜껑 닫고 삶아 비린내 제거</li>
+              <li><strong>보관:</strong> 신선도 중요, 구매 후 빠르게 사용</li>
+              <li><strong>팁:</strong> 데친 뒤 즉시 조리</li>
+              <li><strong>대체:</strong> 숙주나물 (빠른 조리)</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>고사리 &amp; 취나물</h3>
-            <p>건조된 고사리는 물에 불려 사용하며, 취나물은 데친 뒤 무쳐 먹습니다. 쓴맛 제거를 위해 삶은 후 찬물에 충분히 담가두세요.</p>
+          <article class="guide-card">
+            <h3>🌿 고사리 & 취나물</h3>
+            <ul>
+              <li><strong>특징:</strong> 건조 나물로 깊은 향미</li>
+              <li><strong>조리:</strong> 물에 불린 후 삶아 쓴맛 제거</li>
+              <li><strong>보관:</strong> 건조 상태로 밀폐 보관 (상온 6개월)</li>
+              <li><strong>팁:</strong> 찬물에 충분히 담가 불리기</li>
+              <li><strong>대체:</strong> 시금치, 미나리 (신선 채소)</li>
+            </ul>
+          </article>
+          <article class="guide-card">
+            <h3>🥒 무 & 배추</h3>
+            <ul>
+              <li><strong>특징:</strong> 김치와 국물 요리의 기본 채소</li>
+              <li><strong>용도:</strong> 김치, 무나물, 국, 육수</li>
+              <li><strong>보관:</strong> 냉장 보관 (비닐 또는 신문지로 감싸기)</li>
+              <li><strong>팁:</strong> 무는 껍질째 육수에 활용</li>
+              <li><strong>대체:</strong> 서양 배추 (Napa cabbage)</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="ingredients-grains">
+      <!-- Rice & Grains -->
+      <section class="section" aria-labelledby="grains-heading">
         <div>
-          <h2 class="section-title" id="ingredients-grains">밥 &amp; 곡물</h2>
+          <h2 class="section-title" id="grains-heading">밥 & 곡물</h2>
           <p class="section-lead">곡물 조합과 보관법을 익히면 밥맛이 확 달라집니다.</p>
         </div>
-        <div class="recipe-card-grid">
-          <article class="card">
-            <h3>백미 &amp; 현미</h3>
-            <p>백미는 부드러운 식감, 현미는 식이섬유와 영양이 풍부합니다. 취향에 따라 혼합해 밥을 지어보세요.</p>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <h3>🌾 백미 & 현미</h3>
+            <ul>
+              <li><strong>백미:</strong> 부드러운 식감, 소화 쉬움</li>
+              <li><strong>현미:</strong> 식이섬유와 영양 풍부</li>
+              <li><strong>혼합:</strong> 백미 70% + 현미 30% 추천</li>
+              <li><strong>보관:</strong> 밀폐 용기, 냉장 보관 (벌레 방지)</li>
+              <li><strong>팁:</strong> 씻을 때 물이 맑아질 때까지</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>잡곡</h3>
-            <p>보리, 귀리, 수수 등 다양한 잡곡을 섞으면 영양 균형을 맞출 수 있습니다. 물 조절을 위해 잡곡을 미리 불려 사용하는 것이 좋습니다.</p>
+          <article class="guide-card">
+            <h3>🍚 잡곡</h3>
+            <ul>
+              <li><strong>종류:</strong> 보리, 귀리, 수수, 검은콩, 서리태</li>
+              <li><strong>영양:</strong> 단백질, 식이섬유, 비타민 풍부</li>
+              <li><strong>조리:</strong> 미리 불려서 밥 지을 때 섞기</li>
+              <li><strong>보관:</strong> 밀폐 용기, 냉장 보관</li>
+              <li><strong>팁:</strong> 물 조절로 식감 맞추기</li>
+            </ul>
           </article>
-          <article class="card">
-            <h3>김 &amp; 다시마</h3>
-            <p>바다향을 더하는 해조류로 밥반찬, 육수, 스낵으로 활용합니다. 습기를 피하고 밀폐 용기에 보관하세요.</p>
+          <article class="guide-card">
+            <h3>🥢 김 & 다시마</h3>
+            <ul>
+              <li><strong>특징:</strong> 바다향을 더하는 해조류</li>
+              <li><strong>용도:</strong> 김 (반찬, 주먹밥), 다시마 (육수)</li>
+              <li><strong>보관:</strong> 습기 피해 밀폐 용기 보관</li>
+              <li><strong>팁:</strong> 다시마는 물에 30분 담가 육수</li>
+              <li><strong>대체:</strong> 김 대신 파래, 다시마 대신 표고</li>
+            </ul>
+          </article>
+          <article class="guide-card">
+            <h3>🫘 두부 & 콩</h3>
+            <ul>
+              <li><strong>특징:</strong> 식물성 단백질의 대표 식재료</li>
+              <li><strong>용도:</strong> 찌개, 무침, 조림, 볶음</li>
+              <li><strong>보관:</strong> 두부는 물에 담가 냉장 (2-3일)</li>
+              <li><strong>팁:</strong> 콩은 불려서 밥과 함께 조리</li>
+              <li><strong>대체:</strong> 템페, 렌틸콩 (비건 단백질)</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <aside class="section aside-panel" aria-labelledby="ingredients-alt">
-        <h2 id="ingredients-alt">대체재 &amp; 쇼핑 팁</h2>
-        <p>비건이나 할랄 인증 제품은 제품 라벨을 꼭 확인하고, 냉동 나물은 사용 전 충분히 해동해 물기를 제거하세요. 해외 거주자는 아시안 마켓이나 온라인 샵에서 ‘Korean style’ 표기를 확인하면 실패 확률이 줄어듭니다.</p>
-        <a class="button tertiary" href="vegan-halal.html">대체재 가이드 보기</a>
+      <!-- Shopping & Storage Tips -->
+      <aside class="section aside-panel" aria-labelledby="tips-heading">
+        <h2 id="tips-heading">🛒 쇼핑 & 보관 팁</h2>
+        <p>
+          식재료는 신선도가 중요합니다. 비건이나 할랄 인증 제품은 제품 라벨을 꼭 확인하고,
+          냉동 나물은 사용 전 충분히 해동해 물기를 제거하세요.
+        </p>
+        <ul>
+          <li>아시안 마켓이나 온라인 샵에서 'Korean style' 표기 확인</li>
+          <li>장류는 무첨가 또는 유기농 제품 선택</li>
+          <li>나물은 제철 재료 사용, 냉동 나물도 활용 가능</li>
+          <li>곡물은 밀폐 용기에 냉장 보관해 신선도 유지</li>
+          <li>대체재 사용 시 조리 방법과 양념 조절 필요</li>
+        </ul>
+        <a class="button tertiary" href="vegan-halal.html">대체재 가이드 보기 →</a>
       </aside>
     </main>
+
     <div data-include="../partials/footer.html" data-root-path=".."></div>
   </body>
 </html>
