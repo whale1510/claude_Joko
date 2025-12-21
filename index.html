@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>조코의 장·나물·밥 | 한식 레시피 가이드</title>
-    <meta name="description" content="한국의 전통 발효 장, 제철 나물, 밥 요리를 소개하는 레시피 사이트. 비건과 할랄 식단을 위한 대체재 가이드 포함." />
+    <title> Joko's Korean Food Recipes for Foreigners | Korean Recipe Guide</title>
+    <meta name="description" content="A recipe site introducing traditional Korean fermented sauces, seasonal vegetables, and rice dishes. Includes substitution guides for vegan and halal diets." />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/includes.js" defer></script>
+    <script src="assets/js/recipe-filter.js" defer></script>
   </head>
   <body data-root-path=".">
     <div data-include="partials/header.html" data-root-path="."></div>
@@ -14,15 +15,15 @@
     <main id="main-content">
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">한식의 기본, 장·나물·밥</h1>
+        <h1 id="hero-heading">Recipes for Everyone</h1>
         <p>
-          발효의 깊이, 제철의 향, 든든한 한 끼. 비건과 할랄 식단을 위한 대체재까지
-          준비된 한식 레시피로 누구나 부담 없이 즐기세요.
+          Depth of fermentation, aroma of seasonal produce, hearty comfort food.
+          Enjoy Korean recipes made accessible for everyone, with substitution guides for vegan and halal diets.
         </p>
         <div class="button-group">
-          <a class="button primary" href="#categories-heading">카테고리 탐색</a>
-          <a class="button tertiary" href="#filter-heading">레시피 찾기</a>
-          <a class="button secondary" href="#featured-heading">추천 레시피 보기</a>
+          <a class="button primary" href="#categories-heading">Explore Categories</a>
+          <a class="button tertiary" href="#filter-heading">Find Recipes</a>
+          <a class="button secondary" href="#featured-heading">View Featured Recipes</a>
         </div>
       </section>
 
@@ -31,18 +32,18 @@
         <div class="highlight-grid">
           <a href="recipes/index.html" class="highlight-card">
             <div class="highlight-card-icon">🍚</div>
-            <h3>전체 레시피</h3>
-            <p>장, 나물, 밥 카테고리별 레시피를 모두 탐색하세요</p>
+            <h3>All Recipes</h3>
+            <p>Explore recipes across Main Dish, Side Dish, and Rice categories</p>
           </a>
           <a href="guides/vegan-halal.html" class="highlight-card">
             <div class="highlight-card-icon">🌱</div>
-            <h3>비건·할랄 가이드</h3>
-            <p>식단에 맞는 대체재와 조리법을 확인하세요</p>
+            <h3>Vegan & Halal Guide</h3>
+            <p>Find substitutions and cooking methods for your dietary needs</p>
           </a>
           <a href="guides/korean-ingredients.html" class="highlight-card">
             <div class="highlight-card-icon">🥬</div>
-            <h3>한국 식재료 안내</h3>
-            <p>장, 나물, 곡물의 특징과 보관법을 알아보세요</p>
+            <h3>Korean Ingredients Guide</h3>
+            <p>Learn about the characteristics and storage of jang, vegetables, and grains</p>
           </a>
         </div>
       </section>
@@ -50,111 +51,319 @@
       <!-- Category Cards -->
       <section class="section" aria-labelledby="categories-heading">
         <div>
-          <h2 class="section-title" id="categories-heading">카테고리별로 탐색하기</h2>
-          <p class="section-lead">장, 나물, 밥 카테고리를 통해 다양한 한식 레시피를 발견하세요.</p>
+          <h2 class="section-title" id="categories-heading">Explore by Category</h2>
+          <p class="section-lead">Discover diverse Korean recipes through Main Dish, Side Dish, and Rice categories.</p>
         </div>
         <div class="category-grid">
-          <article class="card" aria-labelledby="card-jang">
-            <span class="category-tag">장 (Jang)</span>
-            <h3 id="card-jang">발효 장의 깊은 맛</h3>
-            <p>된장, 고추장, 간장 등 발효 장을 활용한 찌개와 양념 요리. 한식의 감칠맛을 책임지는 핵심 재료입니다.</p>
-            <a href="recipes/jang/index.html">장 레시피 모아보기 →</a>
+          <article class="card" aria-labelledby="card-main-dish">
+            <span class="category-tag">Main Dish</span>
+            <h3 id="card-main-dish">Deep Flavors of Fermented Sauces</h3>
+            <p>Stews and seasonings using fermented sauces like doenjang, gochujang, and soy sauce. The key ingredients responsible for Korean cuisine's umami depth.</p>
+            <a href="recipes/main-dish/index.html">View All Main Dish Recipes →</a>
           </article>
-          <article class="card" aria-labelledby="card-namul">
-            <span class="category-tag">나물 (Namul)</span>
-            <h3 id="card-namul">제철 나물의 향</h3>
-            <p>시금치, 콩나물, 고사리 등 계절 채소로 만드는 건강한 반찬. 간단하지만 깊은 맛이 특징입니다.</p>
-            <a href="recipes/namul/index.html">나물 레시피 모아보기 →</a>
+          <article class="card" aria-labelledby="card-side-dish">
+            <span class="category-tag">Side Dish</span>
+            <h3 id="card-side-dish">Aroma of Seasonal Vegetables</h3>
+            <p>Healthy side dishes made with seasonal vegetables like spinach, bean sprouts, and fernbrake. Simple yet deeply flavorful.</p>
+            <a href="recipes/side-dish/index.html">View All Side Dish Recipes →</a>
           </article>
           <article class="card" aria-labelledby="card-rice">
-            <span class="category-tag">밥 (Rice)</span>
-            <h3 id="card-rice">든든한 밥 한 그릇</h3>
-            <p>잡곡밥부터 볶음밥, 비빔밥까지. 다양한 토핑과 양념으로 완성하는 한 끼 식사를 소개합니다.</p>
-            <a href="recipes/rice/index.html">밥 레시피 모아보기 →</a>
+            <span class="category-tag">Rice</span>
+            <h3 id="card-rice">Hearty Bowl of Rice</h3>
+            <p>From mixed grain rice to fried rice and bibimbap. Complete meals finished with diverse toppings and seasonings.</p>
+            <a href="recipes/rice/index.html">View All Rice Recipes →</a>
           </article>
         </div>
       </section>
 
       <!-- Recipe Filter -->
-      <section class="section" aria-labelledby="filter-heading">
-        <div>
-          <h2 class="section-title" id="filter-heading">레시피 찾기</h2>
-          <p class="section-lead">식단 유형과 재료를 선택해 원하는 레시피를 빠르게 찾아보세요.</p>
-        </div>
+      <section class="section filter-section" aria-labelledby="filter-heading">
         <div class="filter-panel">
-          <form class="filter-form" aria-label="레시피 필터">
+          <h2 id="filter-heading" class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Find Your Recipe</h2>
+          <p class="section-lead" style="margin-bottom: 2rem;">Filter recipes by category or dietary preferences.</p>
+
+          <form class="filter-form" id="recipe-filter-form">
+            <!-- Category Filter -->
             <fieldset class="filter-group">
-              <legend>식단 유형</legend>
+              <legend>Category</legend>
               <div class="filter-options">
-                <label><input type="checkbox" name="diet" value="vegan" /> 비건</label>
-                <label><input type="checkbox" name="diet" value="halal" /> 할랄</label>
-                <label><input type="checkbox" name="diet" value="gluten-free" /> 글루텐 프리</label>
-                <label><input type="checkbox" name="diet" value="quick" /> 30분 이내</label>
+                <label>
+                  <input type="checkbox" name="category" value="main-dish">
+                  Main Dish
+                </label>
+                <label>
+                  <input type="checkbox" name="category" value="side-dish">
+                  Side Dish
+                </label>
+                <label>
+                  <input type="checkbox" name="category" value="rice">
+                  Rice
+                </label>
               </div>
             </fieldset>
+
+            <!-- Dietary Filter -->
             <fieldset class="filter-group">
-              <legend>카테고리</legend>
+              <legend>Dietary Type</legend>
               <div class="filter-options">
-                <label><input type="checkbox" name="category" value="jang" /> 장 (Jang)</label>
-                <label><input type="checkbox" name="category" value="namul" /> 나물 (Namul)</label>
-                <label><input type="checkbox" name="category" value="rice" /> 밥 (Rice)</label>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend>주요 재료</legend>
-              <div class="filter-badges" role="list">
-                <span class="badge" role="listitem">된장</span>
-                <span class="badge" role="listitem">시금치</span>
-                <span class="badge" role="listitem">버섯</span>
-                <span class="badge" role="listitem">잡곡</span>
-                <span class="badge" role="listitem">두부</span>
-                <span class="badge" role="listitem">김치</span>
+                <label>
+                  <input type="checkbox" name="dietary" value="vegan">
+                  Vegan
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="halal">
+                  Halal
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="gluten-free">
+                  Gluten-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="nut-free">
+                  Nut-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="dairy-free">
+                  Dairy-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="shellfish-free">
+                  Shellfish-Free
+                </label>
               </div>
             </fieldset>
           </form>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" id="reset-filters" class="button secondary">Reset Filters</button>
+            <div style="flex: 1; min-width: 200px; text-align: right;">
+              <span id="active-filters-count" style="font-size: 0.9rem; color: var(--color-text-secondary);"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filtered Results Section (Hidden by default) -->
+      <section class="section" id="filtered-results-section" style="display: none;" aria-labelledby="filtered-results-heading">
+        <div>
+          <h2 class="section-title" id="filtered-results-heading">
+            <span id="result-count">0</span> Recipe(s) Found
+          </h2>
+        </div>
+        <div class="recipe-card-grid" id="filtered-results-grid">
+          <!-- Filtered recipe cards will be inserted here -->
         </div>
       </section>
 
       <!-- Featured Recipes - Image First -->
-      <section class="section" aria-labelledby="featured-heading">
+      <section class="section" id="featured-recipes-section" aria-labelledby="featured-heading">
         <div>
-          <h2 class="section-title" id="featured-heading">오늘의 추천 레시피</h2>
-          <p class="section-lead">계절 재료와 입맛을 고려해 엄선한 대표 메뉴를 만나보세요.</p>
+          <h2 class="section-title" id="featured-heading">Featured Recipes</h2>
+          <p class="section-lead">Discover signature dishes carefully selected with seasonal ingredients and flavor in mind.</p>
         </div>
         <div class="recipe-card-grid">
-          <article class="card recipe-card">
-            <img src="assets/img/recipes/doenjang-jjigae.jpg" alt="된장찌개" class="recipe-card-image" />
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200g chicken thigh (bite-sized), 1 tbsp gochujang, 1 tbsp soy sauce, 1 tbsp sugar, 1 tbsp garlic, 1 tbsp gochugaru, 1/2 cup cabbage, 1/4 sweet potato (sliced), 1/2 onion"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Dak-galbi.jpg" alt="Dak-galbi" class="recipe-card-image" />
             <div class="recipe-card-content">
-              <span class="category-tag">장 (Jang)</span>
-              <h3><a href="recipes/jang/doenjang-jjigae.html">된장찌개</a></h3>
-              <p>구수한 된장과 두부, 제철 채소가 어우러진 집밥의 정석.</p>
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="recipes/main-dish/dak-galbi.html">Dak-galbi</a></h3>
+              <p>A spicy stir-fry made with chicken, cabbage, sweet potatoes, and other vegetables marinated in gochujang.</p>
               <div class="recipe-metadata">
-                <span>⏱ 30분</span>
-                <span>🥄 3~4인분</span>
+                <span>⏱ 40 min</span>
+                <span>🥄 Serves 3</span>
               </div>
             </div>
           </article>
-          <article class="card recipe-card">
-            <img src="assets/img/recipes/spinach-namul.jpg" alt="시금치나물" class="recipe-card-image" />
+
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="1 bowl steamed rice, 4–5 slices spam (diced), 1 egg (sunny side up or scrambled), 1–2 tbsp mayonnaise, soy sauce drizzle, seaweed flakes, green onion"
+                   data-dietary="halal,nut-free,dairy-free">
+            <img src="assets/img/recipes/Spam Mayo Rice Bowl.jpg" alt="Spam Mayo Rice Bowl" class="recipe-card-image" />
             <div class="recipe-card-content">
-              <span class="category-tag">나물 (Namul)</span>
-              <h3><a href="recipes/namul/spinach-namul.html">시금치나물</a></h3>
-              <p>봄철 대표 나물로 비타민과 철분이 풍부한 반찬.</p>
+              <span class="category-tag">Rice</span>
+              <h3><a href="recipes/rice/spam-mayo-rice-bowl.html">Spam Mayo Rice Bowl</a></h3>
+              <p>A quick, savory rice bowl topped with crispy fried Spam, egg, and a drizzle of mayonnaise and soy sauce.</p>
               <div class="recipe-metadata">
-                <span>⏱ 10분</span>
-                <span>🥄 2인분</span>
+                <span>⏱ 50 min</span>
+                <span>🥄 Serves 2</span>
               </div>
             </div>
           </article>
-          <article class="card recipe-card">
-            <img src="assets/img/recipes/bibimbap.jpg" alt="비빔밥" class="recipe-card-image" />
+
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="1 bowl steamed rice, 1 can tuna (drained), 1–2 tbsp mayonnaise, 1 tsp soy sauce, 1 tsp sugar, 1 tsp minced onion (optional), seaweed flakes, green onion"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Tuna Mayo Rice Bowl.jpg" alt="Tuna Mayo Rice Bowl" class="recipe-card-image" />
             <div class="recipe-card-content">
-              <span class="category-tag">밥 (Rice)</span>
-              <h3><a href="recipes/rice/bibimbap.html">비빔밥</a></h3>
-              <p>다양한 나물과 고추장이 조화를 이루는 대표 한식.</p>
+              <span class="category-tag">Rice</span>
+              <h3><a href="recipes/rice/tuna-mayo-rice-bowl.html">Tuna Mayo Rice Bowl</a></h3>
+              <p>A simple, popular rice dish topped with a creamy, seasoned mixture of canned tuna and mayonnaise.</p>
               <div class="recipe-metadata">
-                <span>⏱ 25분</span>
-                <span>🥄 2인분</span>
+                <span>⏱ 50 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="1 cup white rice, 1/2 cup mixed grains (brown rice, barley, black rice, beans), 2 1/4 cups water"
+                   data-dietary="vegan,halal,gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Multigrain Rice.jpg" alt="Multigrain Rice" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Rice</span>
+              <h3><a href="recipes/rice/multigrain-rice.html">Multigrain Rice</a></h3>
+              <p>Healthy rice blend combining white rice with various grains like brown rice, barley, and beans for added nutrients and texture.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 50 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="200 g korean fish cakes, onion, carrot, green onion (a small amount each), 1 tbsp oil, 1 tbsp soy sauce, 1 tsp sugar, 1–2 tbsp water, sesame oil, sesame seeds"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/stir-fried-fish-cakes.jpg" alt="Stir-fried Fish Cakes" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="recipes/side-dish/stir-fried-fish-cakes.html">Stir-fried Fish Cakes</a></h3>
+              <p>A quick and common side dish consisting of sliced fish cakes stir-fried with vegetables in a savory sauce.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 20 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="80 g small dried anchovies, 1 tbsp oil, 1 tsp soy sauce, 1 tbsp corn syrup or sugar, sesame oil, sesame seeds"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/stir-fried-anchovies.jpg" alt="Stir-fried Anchovies" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="recipes/side-dish/stir-fried-anchovies.html">Stir-fried Anchovies</a></h3>
+              <p>A popular savory and sweet side dish made from small dried anchovies coated in a sticky soy sauce glaze.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="1 napa cabbage, coarse sea salt (for salting cabbage), 1/2 radish, a handful of green onions, 4–5 cloves minced garlic, 1 tsp minced ginger, 1 cup korean red pepper flakes (gochugaru), 2 tbsp salted shrimp (saeujeot), 1 tbsp fish sauce (optional), 1 tbsp sugar"
+                   data-dietary="halal,gluten-free,nut-free,dairy-free">
+            <img src="assets/img/recipes/kimchi.jpg" alt="Kimchi" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="recipes/side-dish/kimchi.html">Kimchi</a></h3>
+              <p>Korea's essential side dish, made from salted and fermented Napa cabbage seasoned with chili powder and various aromatics.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 60 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200–300g pork belly"
+                   data-dietary="gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Samgyeopsal.jpg" alt="Samgyeopsal" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="recipes/main-dish/samgyeopsal.html">Samgyeopsal</a></h3>
+              <p>Thick slices of pork belly, grilled until crispy, usually served with ssamjang and wrapped in fresh greens.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200g thinly sliced beef, 2 tbsp soy sauce, 1 tbsp sugar, 1 tbsp sesame oil, 1 tbsp minced garlic, 1/2 tbsp cooking wine (optional), 1/4 onion (sliced), 1/4 carrot (thinly sliced), 1 green onion, sesame seeds"
+                   data-dietary="nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Bulgogi.jpg" alt="Bulgogi" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="recipes/main-dish/bulgogi.html">Bulgogi</a></h3>
+              <p>Thinly sliced, marinated beef grilled or pan-fried, famous for its sweet and savory soy sauce flavor.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200g sliced pork (shoulder or belly), 2 tbsp gochujang (korean red chili paste), 1 tbsp soy sauce, 1 tbsp sugar, 1 tbsp minced garlic, 1 tbsp gochugaru (red chili flakes), 1 tbsp cooking oil, 1/2 onion (sliced), 1/2 carrot (sliced, optional), 1 green onion (sliced)"
+                   data-dietary="nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/Spicy Stir-fried Pork.jpg" alt="Spicy Stir-fried Pork" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="recipes/main-dish/spicy-stir-fried-pork.html">Spicy Stir-fried Pork</a></h3>
+              <p>A popular Korean dish featuring sliced pork marinated and stir-fried in a spicy gochujang-based sauce.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 40 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="doenjang,tofu,zucchini,potato,mushroom"
+                   data-dietary="vegan,gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/doenjang-jjigae.jpg" alt="Doenjang Jjigae (Soybean Paste Stew)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="recipes/main-dish/doenjang-jjigae.html">Doenjang Jjigae</a></h3>
+              <p>The essence of home cooking: savory doenjang with tofu and seasonal vegetables.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 3-4</span>
+              </div>
+            </div>
+          </article>
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="spinach,garlic,sesame-oil"
+                   data-dietary="vegan,halal,gluten-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/spinach-namul.jpg" alt="Spinach Namul (Seasoned Spinach)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="recipes/side-dish/spinach-namul.html">Spinach Namul</a></h3>
+              <p>A spring staple rich in vitamins and iron.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 10 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="rice,vegetables,gochujang,egg,sesame-oil"
+                   data-dietary="gluten-free,dairy-free,shellfish-free">
+            <img src="assets/img/recipes/bibimbap.jpg" alt="Bibimbap (Mixed Rice Bowl)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Rice</span>
+              <h3><a href="recipes/rice/bibimbap.html">Bibimbap</a></h3>
+              <p>Korea's signature dish harmonizing diverse vegetables and gochujang.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 25 min</span>
+                <span>🥄 Serves 2</span>
               </div>
             </div>
           </article>
@@ -163,17 +372,17 @@
 
       <!-- Vegan & Halal Guide CTA -->
       <aside class="section aside-panel" aria-labelledby="guide-cta-heading">
-        <h2 id="guide-cta-heading">🌱 모든 식단을 위한 한식</h2>
+        <h2 id="guide-cta-heading">🌱 Korean Cuisine for Every Diet</h2>
         <p>
-          비건, 할랄, 글루텐 프리 등 다양한 식단 요구에 맞춰 한식을 즐길 수 있습니다.
-          장류는 비건 또는 할랄 인증 제품을 선택하고, 육수는 채수나 표고버섯 우린 물로 대체해보세요.
+          Enjoy Korean food adapted for diverse dietary needs including vegan, halal, and gluten-free.
+          Choose vegan or halal-certified jang products, and substitute stock with vegetable broth or shiitake mushroom water.
         </p>
         <ul>
-          <li>비건 인증 된장, 고추장 사용하기</li>
-          <li>채수와 표고버섯 육수로 깊은 맛 내기</li>
-          <li>참기름 대신 들기름, 포도씨유 활용하기</li>
+          <li>Use vegan-certified doenjang and gochujang</li>
+          <li>Create deep flavors with vegetable or shiitake mushroom broth</li>
+          <li>Replace sesame oil with perilla oil or grapeseed oil</li>
         </ul>
-        <a class="button tertiary" href="guides/vegan-halal.html">상세 가이드 읽어보기 →</a>
+        <a class="button tertiary" href="guides/vegan-halal.html">Read Full Guide →</a>
       </aside>
     </main>
 

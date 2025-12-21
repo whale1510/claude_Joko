@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Recipes | Joko's Jang·Namul·Bap</title>
+    <meta name="description" content="Explore Korean recipes by Main Dish, Side Dish, and Rice categories." />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/includes.js" defer></script>
+    <script src="../assets/js/recipe-filter.js" defer></script>
+  </head>
+  <body data-root-path="..">
+    <div data-include="../partials/header.html" data-root-path=".."></div>
+
+    <main id="main-content">
+      <!-- Page Header -->
+      <section class="hero" aria-labelledby="recipes-heading">
+        <h1 id="recipes-heading">All Recipes</h1>
+        <p>
+          Explore Korean recipes organized into three categories: Main Dish, Side Dish, and Rice.
+          Each recipe includes cooking time, difficulty level, and vegan/halal substitution information.
+        </p>
+      </section>
+
+      <!-- Filter Section -->
+      <section class="section filter-section" aria-labelledby="filter-heading">
+        <div class="filter-panel">
+          <h2 id="filter-heading" class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Find Your Recipe</h2>
+          <p class="section-lead" style="margin-bottom: 2rem;">Filter recipes by category or dietary preferences.</p>
+
+          <form class="filter-form" id="recipe-filter-form">
+            <!-- Category Filter -->
+            <fieldset class="filter-group">
+              <legend>Category</legend>
+              <div class="filter-options">
+                <label>
+                  <input type="checkbox" name="category" value="main-dish">
+                  Main Dish
+                </label>
+                <label>
+                  <input type="checkbox" name="category" value="side-dish">
+                  Side Dish
+                </label>
+                <label>
+                  <input type="checkbox" name="category" value="rice">
+                  Rice
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Dietary Filter -->
+            <fieldset class="filter-group">
+              <legend>Dietary Type</legend>
+              <div class="filter-options">
+                <label>
+                  <input type="checkbox" name="dietary" value="vegan">
+                  Vegan
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="halal">
+                  Halal
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="gluten-free">
+                  Gluten-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="nut-free">
+                  Nut-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="dairy-free">
+                  Dairy-Free
+                </label>
+                <label>
+                  <input type="checkbox" name="dietary" value="shellfish-free">
+                  Shellfish-Free
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+            <button type="button" id="reset-filters" class="button secondary">Reset Filters</button>
+            <div style="flex: 1; min-width: 200px; text-align: right;">
+              <span id="active-filters-count" style="font-size: 0.9rem; color: var(--color-text-secondary);"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filtered Results Section (Hidden by default) -->
+      <section class="section" id="filtered-results-section" style="display: none;" aria-labelledby="filtered-results-heading">
+        <div>
+          <h2 class="section-title" id="filtered-results-heading">
+            <span id="result-count">0</span> Recipe(s) Found
+          </h2>
+        </div>
+        <div class="recipe-card-grid" id="filtered-results-grid">
+          <!-- Filtered recipe cards will be inserted here -->
+        </div>
+      </section>
+
+      <!-- Quick Category Navigation -->
+      <section class="section" aria-labelledby="category-nav-heading">
+        <div class="highlight-grid">
+          <a href="#main-dish-recipes" class="highlight-card">
+            <div class="highlight-card-icon">🍲</div>
+            <h3>Main Dish</h3>
+            <p>Stews and seasonings made with fermented sauces</p>
+          </a>
+          <a href="#side-dish-recipes" class="highlight-card">
+            <div class="highlight-card-icon">🥗</div>
+            <h3>Side Dish</h3>
+            <p>Healthy side dishes made with seasonal vegetables</p>
+          </a>
+          <a href="#rice-recipes" class="highlight-card">
+            <div class="highlight-card-icon">🍚</div>
+            <h3>Rice</h3>
+            <p>Hearty rice meals for a complete dish</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Main Dish Recipes -->
+      <section class="section" id="main-dish-recipes" aria-labelledby="main-dish-heading">
+        <div>
+          <h2 class="section-title" id="main-dish-heading">Main Dish Recipes</h2>
+          <p class="section-lead">Stews and seasonings featuring the depth of fermentation from doenjang, gochujang, and soy sauce.</p>
+        </div>
+        <div class="recipe-card-grid">
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200–300g pork belly"
+                   data-dietary="gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/Samgyeopsal.jpg" alt="Samgyeopsal" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="main-dish/samgyeopsal.html">Samgyeopsal</a></h3>
+              <p>Thick slices of pork belly, grilled until crispy, usually served with ssamjang and wrapped in fresh greens.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200g thinly sliced beef, 2 tbsp soy sauce, 1 tbsp sugar, 1 tbsp sesame oil, 1 tbsp minced garlic, 1/2 tbsp cooking wine (optional), 1/4 onion (sliced), 1/4 carrot (thinly sliced), 1 green onion, sesame seeds"
+                   data-dietary="nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/Bulgogi.jpg" alt="Bulgogi" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="main-dish/bulgogi.html">Bulgogi</a></h3>
+              <p>Thinly sliced, marinated beef grilled or pan-fried, famous for its sweet and savory soy sauce flavor.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="200g sliced pork (shoulder or belly), 2 tbsp gochujang (korean red chili paste), 1 tbsp soy sauce, 1 tbsp sugar, 1 tbsp minced garlic, 1 tbsp gochugaru (red chili flakes), 1 tbsp cooking oil, 1/2 onion (sliced), 1/2 carrot (sliced, optional), 1 green onion (sliced)"
+                   data-dietary="nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/Spicy Stir-fried Pork.jpg" alt="Spicy Stir-fried Pork" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="main-dish/spicy-stir-fried-pork.html">Spicy Stir-fried Pork</a></h3>
+              <p>A popular Korean dish featuring sliced pork marinated and stir-fried in a spicy gochujang-based sauce.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 40 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="doenjang,tofu,zucchini,potato,mushroom"
+                   data-dietary="vegan,gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/doenjang-jjigae.jpg" alt="Doenjang Jjigae (Soybean Paste Stew)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="main-dish/doenjang-jjigae.html">Doenjang Jjigae</a></h3>
+              <p>The essence of home cooking: savory doenjang with tofu and seasonal vegetables.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 3-4</span>
+              </div>
+            </div>
+          </article>
+          <article class="card recipe-card"
+                   data-category="main-dish"
+                   data-ingredients="doenjang,gochujang,garlic,sesame"
+                   data-dietary="vegan,halal,gluten-free,nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/ssamjang.jpg" alt="Ssamjang (Korean Dipping Sauce)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Main Dish</span>
+              <h3><a href="main-dish/ssamjang.html">Ssamjang</a></h3>
+              <p>A savory dipping style perfect for fresh lettuce wraps.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 10 min</span>
+                <span>🥄 Serves 4</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="main-dish/index.html" class="button secondary">View All Main Dish Recipes →</a>
+        </div>
+      </section>
+
+      <!-- Side Dish Recipes -->
+      <section class="section" id="side-dish-recipes" aria-labelledby="side-dish-heading">
+        <div>
+          <h2 class="section-title" id="side-dish-heading">Side Dish Recipes</h2>
+          <p class="section-lead">Seasonal vegetable side dishes featuring spinach, bean sprouts, fernbrake, and more.</p>
+        </div>
+        <div class="recipe-card-grid">
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="200 g korean fish cakes, onion, carrot, green onion (a small amount each), 1 tbsp oil, 1 tbsp soy sauce, 1 tsp sugar, 1–2 tbsp water, sesame oil, sesame seeds"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/stir-fried-fish-cakes.jpg" alt="Stir-fried Fish Cakes" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="side-dish/stir-fried-fish-cakes.html">Stir-fried Fish Cakes</a></h3>
+              <p>A quick and common side dish consisting of sliced fish cakes stir-fried with vegetables in a savory sauce.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 20 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="80 g small dried anchovies, 1 tbsp oil, 1 tsp soy sauce, 1 tbsp corn syrup or sugar, sesame oil, sesame seeds"
+                   data-dietary="halal,nut-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/stir-fried-anchovies.jpg" alt="Stir-fried Anchovies" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="side-dish/stir-fried-anchovies.html">Stir-fried Anchovies</a></h3>
+              <p>A popular savory and sweet side dish made from small dried anchovies coated in a sticky soy sauce glaze.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 30 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="1 napa cabbage, coarse sea salt (for salting cabbage), 1/2 radish, a handful of green onions, 4–5 cloves minced garlic, 1 tsp minced ginger, 1 cup korean red pepper flakes (gochugaru), 2 tbsp salted shrimp (saeujeot), 1 tbsp fish sauce (optional), 1 tbsp sugar"
+                   data-dietary="halal,gluten-free,nut-free,dairy-free">
+            <img src="../assets/img/recipes/kimchi.jpg" alt="Kimchi" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="side-dish/kimchi.html">Kimchi</a></h3>
+              <p>Korea's essential side dish, made from salted and fermented Napa cabbage seasoned with chili powder and various aromatics.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 60 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="spinach,garlic,sesame-oil"
+                   data-dietary="vegan,halal,gluten-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/spinach-namul.jpg" alt="Spinach Namul (Seasoned Spinach)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="side-dish/spinach-namul.html">Spinach Namul</a></h3>
+              <p>A spring staple rich in vitamins and iron.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 10 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+          <article class="card recipe-card"
+                   data-category="side-dish"
+                   data-ingredients="bean-sprouts,garlic,sesame-oil"
+                   data-dietary="vegan,halal,gluten-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/bean-sprout-namul.jpg" alt="Bean Sprout Namul (Seasoned Bean Sprouts)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Side Dish</span>
+              <h3><a href="side-dish/bean-sprout-namul.html">Bean Sprout Namul</a></h3>
+              <p>A crisp and light basic side dish that everyone loves.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 15 min</span>
+                <span>🥄 Serves 3</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="side-dish/index.html" class="button secondary">View All Side Dish Recipes →</a>
+        </div>
+      </section>
+
+      <!-- Rice Recipes -->
+      <section class="section" id="rice-recipes" aria-labelledby="rice-heading">
+        <div>
+          <h2 class="section-title" id="rice-heading">Rice Recipes</h2>
+          <p class="section-lead">Complete meals from mixed grain rice to fried rice and bibimbap, finished with diverse toppings and seasonings.</p>
+        </div>
+        <div class="recipe-card-grid">
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="rice,vegetables,gochujang,egg,sesame-oil"
+                   data-dietary="gluten-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/bibimbap.jpg" alt="Bibimbap (Mixed Rice Bowl)" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Rice</span>
+              <h3><a href="rice/bibimbap.html">Bibimbap</a></h3>
+              <p>Korea's signature dish harmonizing diverse vegetables and gochujang.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 25 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+          <article class="card recipe-card"
+                   data-category="rice"
+                   data-ingredients="rice,kimchi,gochujang,egg,onion"
+                   data-dietary="gluten-free,dairy-free,shellfish-free">
+            <img src="../assets/img/recipes/kimchi-fried-rice.jpg" alt="Kimchi Fried Rice" class="recipe-card-image" />
+            <div class="recipe-card-content">
+              <span class="category-tag">Rice</span>
+              <h3><a href="rice/kimchi-fried-rice.html">Kimchi Fried Rice</a></h3>
+              <p>A quick meal made simply with kimchi and rice.</p>
+              <div class="recipe-metadata">
+                <span>⏱ 15 min</span>
+                <span>🥄 Serves 2</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="rice/index.html" class="button secondary">View All Rice Recipes →</a>
+        </div>
+      </section>
+
+      <!-- Recipe Tips -->
+      <aside class="section aside-panel" aria-labelledby="tips-heading">
+        <h2 id="tips-heading">🍳 Recipe Tips</h2>
+        <p>
+          All recipes include cooking time, servings, and difficulty level information.
+          For vegan and halal substitution information, check each recipe page.
+        </p>
+        <ul>
+          <li>Recipe difficulty: Beginner, Intermediate, Advanced</li>
+          <li>Cooking time: Preparation and cooking time shown separately</li>
+          <li>Vegan/Halal substitutions: Detailed guidance in each recipe</li>
+        </ul>
+        <a class="button tertiary" href="../guides/vegan-halal.html">View Substitution Guide →</a>
+      </aside>
+    </main>
+
+    <div data-include="../partials/footer.html" data-root-path=".."></div>
+  </body>
+</html>

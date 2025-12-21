@@ -88,12 +88,85 @@ No formal test suite. Manually verify:
 
 ## Adding New Recipes
 
-1. Create a new HTML file in the appropriate category folder (e.g., `recipes/jang/new-recipe.html`)
+1. Create a new HTML file in the appropriate category folder (e.g., `recipes/main-dish/new-recipe.html`)
 2. Copy structure from existing recipe (e.g., `doenjang-jjigae.html`)
-3. Update `data-root-path` based on nesting level (from `recipes/jang/`, use `../..`)
+3. Update `data-root-path` based on nesting level (from `recipes/main-dish/`, use `../..`)
 4. Include header/footer partials with matching `data-root-path`
-5. Add recipe card to category index (e.g., `recipes/jang/index.html`)
+5. Add recipe card to `recipes/index.html` with proper filter metadata (see below)
 6. Optionally feature on homepage (`index.html`)
+
+### Recipe Filter Metadata
+
+When adding a recipe card to `recipes/index.html` or `index.html`, include these `data-*` attributes on the `<article class="recipe-card">` element:
+
+```html
+<article class="card recipe-card"
+         data-category="main-dish"
+         data-ingredients="doenjang,tofu,zucchini,potato"
+         data-dietary="vegan,halal,gluten-free,nut-free,dairy-free,shellfish-free">
+  <!-- Recipe card content -->
+</article>
+```
+
+**Attribute Guidelines:**
+
+- **`data-category`** (required): One of `main-dish`, `side-dish`, or `rice`
+  - Used for filtering recipes by category
+
+- **`data-ingredients`** (required): Comma-separated list of main ingredients (no spaces)
+  - Use kebab-case for multi-word ingredients: `bean-sprouts`, `sesame-oil`, `gochujang`
+  - **Note**: Ingredients are stored but NOT displayed in the filter UI (per design decision)
+  - Common ingredients: `doenjang`, `gochujang`, `garlic`, `tofu`, `rice`, `kimchi`, `egg`, `vegetables`, `sesame-oil`, `spinach`, `bean-sprouts`, `mushroom`, `potato`, `zucchini`, `onion`
+
+- **`data-dietary`** (required): Comma-separated list of dietary types (no spaces)
+  - Available options (displayed in filter UI):
+    - `vegan` - Fully vegan (no animal products)
+    - `halal` - Halal-certified or halal-friendly
+    - `gluten-free` - Contains no gluten
+    - `nut-free` - Contains no nuts
+    - `dairy-free` - Contains no dairy products
+    - `shellfish-free` - Contains no shellfish
+
+**Example Recipe Cards:**
+
+```html
+<!-- Vegan & Halal side dish -->
+<article class="card recipe-card"
+         data-category="side-dish"
+         data-ingredients="spinach,garlic,sesame-oil"
+         data-dietary="vegan,halal,gluten-free,dairy-free,shellfish-free">
+  ...
+</article>
+
+<!-- Gluten-free rice dish (contains egg) -->
+<article class="card recipe-card"
+         data-category="rice"
+         data-ingredients="rice,kimchi,gochujang,egg"
+         data-dietary="gluten-free,dairy-free,shellfish-free">
+  ...
+</article>
+
+<!-- Fully vegan main dish -->
+<article class="card recipe-card"
+         data-category="main-dish"
+         data-ingredients="doenjang,tofu,vegetables"
+         data-dietary="vegan,gluten-free,nut-free,dairy-free,shellfish-free">
+  ...
+</article>
+```
+
+**Filter Behavior:**
+
+- **Category filter**: OR logic - shows recipes matching ANY selected category
+- **Dietary filter**: AND logic - shows recipes matching ALL selected dietary types
+- Example: Selecting "vegan" + "halal" will only show recipes that are both vegan AND halal
+
+**Important Notes:**
+
+- Ingredient names should be consistent across all recipes (e.g., always use `sesame-oil`, not `sesame oil` or `sesameOil`)
+- All three attributes (`data-category`, `data-ingredients`, `data-dietary`) are required for the filter to work correctly
+- Use lowercase and kebab-case for all attribute values
+- The filter works on both `index.html` and `recipes/index.html` pages
 
 ## Image Management
 
@@ -107,6 +180,7 @@ When adding images, use descriptive filenames matching recipe slugs and provide 
 ## Important Files
 
 - `assets/js/includes.js` - Controls partial loading and path resolution (critical for navigation)
+- `assets/js/recipe-filter.js` - Recipe filtering system (category, ingredients, dietary preferences)
 - `assets/css/style.css` - Single source of truth for all styling
 - `partials/header.html`, `partials/footer.html` - Shared site chrome
 - `README.md` - Korean language project overview
