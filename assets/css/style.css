@@ -420,11 +420,24 @@ main {
   overflow: hidden;
   background: white;
   border: 1px solid var(--color-border-subtle);
+  position: relative;
+  cursor: pointer;
 }
 
 .recipe-card:hover {
   border-color: var(--color-orange-light);
   box-shadow: var(--shadow-md);
+}
+
+/* Stretched link - makes entire card clickable */
+.recipe-card-content h3 a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .recipe-card-image {
